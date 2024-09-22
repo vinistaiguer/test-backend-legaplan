@@ -14,9 +14,6 @@ const __dirname = path.dirname(__filename);
 app.use(middlewares);
 app.use('/api', jsonServerRouter);
 
-// Serve arquivos estáticos da pasta 'public'
-app.use(express.static(path.join(__dirname, 'public')));
-
 const PORT = process.env.PORT || "3001";
 
 app.listen(PORT, () => {
